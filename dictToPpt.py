@@ -2,9 +2,13 @@ from pptx import Presentation
 from pptx.slide import Slide
 from pptx.util import Pt
 from pptx.enum.text import PP_ALIGN, MSO_AUTO_SIZE
-import win32com.client
 import os
 import re
+
+try:
+    import win32com.client
+except ImportError:
+    win32com = None
 
 
 ### Helper method to preview the slide layouts available in a PowerPoint presentation
@@ -202,6 +206,9 @@ def addLayout1(prs: Presentation, title: str) -> Slide:
 
 
 def shrinkTextInPowerpoint(file_path: str) -> None:
+    if win32com is None:
+        raise RuntimeError("win32com is only available on Windows with pywin32 installed.")
+
     try:
         powerpoint = win32com.client.Dispatch("PowerPoint.Application")
         powerpoint.Visible = True

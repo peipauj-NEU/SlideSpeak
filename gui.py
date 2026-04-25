@@ -3,6 +3,7 @@ from tkinter import filedialog, messagebox, ttk, scrolledtext
 import shutil
 import os
 import sys
+import subprocess
 import threading
 import json
 import hashlib
@@ -159,6 +160,17 @@ class SlideSpeakGUI:
         self.log_text.see(tk.END)
         self.log_text.config(state=tk.DISABLED)
         self.root.update_idletasks()
+
+    def open_file_with_default_app(self, file_path):
+        if sys.platform.startswith("win"):
+            os.startfile(file_path)
+            return
+
+        opener = "open" if sys.platform == "darwin" else "xdg-open"
+        if shutil.which(opener) is None:
+            raise RuntimeError(f"No system opener found ({opener}). The presentation was saved to {file_path}.")
+
+        subprocess.Popen([opener, file_path])
 
     def browse_save_location(self):
         file_path = filedialog.asksaveasfilename(
@@ -379,7 +391,7 @@ class SlideSpeakGUI:
 
             # Offer to open the presentation
             if messagebox.askyesno("Open Presentation", "Would you like to open the presentation now?"):
-                os.startfile(target_path)
+                self.open_file_with_default_app(target_path)
 
         except Exception as e:
             self.log(f"Error: {str(e)}")
@@ -621,7 +633,7 @@ class SlideSpeakGUI:
 
                     # Offer to open the presentation
                     if messagebox.askyesno("Open Presentation", "Would you like to open the presentation now?"):
-                        os.startfile(target_path)
+                        self.open_file_with_default_app(target_path)
 
                     cache_window.destroy()
 

@@ -1,181 +1,130 @@
 {
-    "title": "On Device AI",
+    "title": "Density, Mass, and Volume",
+    "introduction": "Hello everyone. Today, I will be presenting about Density, Mass, and Volume. We will explore what each concept means, how they relate to one another, and how to apply the density formula in practice. [PAUSE=1]",
     "slides": [
         {
-            "title": "Introduction to On-Device AI",
+            "title": "What is Mass?",
             "content": [
                 {
-                    "bulletPoint": "- On-device AI refers to processing of machine learning models directly on end devices like smartphones or IoT sensors.",
+                    "bulletPoint": "Mass is the amount of matter in an object.",
                     "shortSubPoints": [
-                        "End devices",
-                        "Machine learning models"
+                        "Measured in grams (g) or kilograms (kg)",
+                        "Remains constant regardless of location",
+                        "Not the same as weight"
                     ],
                     "details": [
-                        "Faster response times",
-                        "Increased privacy",
-                        "Localized intelligence"
+                        "A 1 kg dumbbell has the same mass on Earth and on the Moon, though its weight (force due to gravity) differs."
                     ]
                 },
                 {
-                    "bulletPoint": "- It enables faster and more personalized experiences without relying solely on cloud servers.",
+                    "bulletPoint": "Mass is measured with a balance scale.",
                     "shortSubPoints": [
-                        "Personalization",
-                        "Real-time processing"
+                        "Triple-beam balances used in labs",
+                        "Electronic scales measure force and convert to mass"
                     ],
                     "details": [
-                        "Improved user experience",
-                        "Reduced latency",
-                        "Better resource utilization"
+                        "A balance compares an unknown mass to known reference masses, making it gravity-independent."
                     ]
                 }
             ],
-            "speech": "Let's discuss introduction to On-Device AI. On-device AI is all about processing machine learning models directly on devices like smartphones or IoT sensors. This not only gives us faster response times and increased privacy, but also localized intelligence that can provide more personalized experiences without constantly relying solely on cloud servers. It significantly improves our user experience by reducing latency and better utilizing resources, making things run smoother and quicker. Let's pause here for a moment."
+            "speech": "Let's discuss mass. Mass is the measure of how much matter an object contains, expressed in grams or kilograms. Unlike weight, mass does not change based on gravitational pull, making it a fundamental property of matter. [PAUSE=1]"
         },
         {
-            "title": "Advantages of On-Device AI",
+            "title": "What is Volume?",
             "content": [
                 {
-                    "bulletPoint": "- Reduced latency: No need for data transfer to the cloud, resulting in quicker responses.",
+                    "bulletPoint": "Volume is the amount of space an object occupies.",
                     "shortSubPoints": [
-                        "Faster response times",
-                        "Improved user experience"
+                        "Measured in cubic centimetres (cm³) or litres (L)",
+                        "Solids: length × width × height",
+                        "Irregular solids: water displacement method"
                     ],
                     "details": [
-                        "Data is processed locally on the device, reducing wait time.",
-                        "Enhances real-time interactions like voice commands and augmented reality"
+                        "For irregular shapes, submerge the object in water and measure the volume of water displaced."
                     ]
                 },
                 {
-                    "bulletPoint": "- Increased privacy: Personalized data processing keeps sensitive information local.",
+                    "bulletPoint": "Liquids are measured with a graduated cylinder.",
                     "shortSubPoints": [
-                        "Data stays within the user's control",
-                        "No exposure of personal data to third parties"
+                        "Read the bottom of the meniscus",
+                        "Parallax errors occur when not reading at eye level"
                     ],
                     "details": [
-                        "Sensitive information does not leave the device, ensuring it remains private and confidential.",
-                        "User data is analyzed locally without being sent to a remote server, reducing privacy risks."
-                    ]
-                },
-                {
-                    "bulletPoint": "- Enhanced battery life: Less energy-consuming compared to remote computing.",
-                    "shortSubPoints": [
-                        "Energy savings",
-                        "Extended device lifespan"
-                    ],
-                    "details": [
-                        "Local processing reduces the load on the device's CPU and GPU, extending battery life.",
-                        "By offloading tasks from the device, it doesn't have to work as hard, leading to longer operational hours."
+                        "The meniscus is the curved surface of a liquid in a narrow container caused by surface tension."
                     ]
                 }
             ],
-            "speech": "Let's discuss Advantages of On-Device AI. Reduced latency is one big advantage, eliminating the need for data transfer to the cloud which speeds up responses significantly. For instance, it makes real-time interactions like voice commands and augmented reality feel much more instant. Additionally, processing data locally keeps sensitive information private as it doesn't leave the device. This reduces privacy risks by keeping personal details confidential and only analyzing them where they belong—on your own device. Finally, on-device AI also enhances battery life because local tasks are less energy-intensive compared to remote computing processes. This means that devices don’t have to work as hard, leading to longer operational hours without needing a recharge so frequently. Let's pause here for a moment."
+            "speech": "Now let's discuss volume. Volume describes the three-dimensional space an object fills. For regular solids we multiply length, width, and height; for irregular objects we rely on the water displacement method. [PAUSE=1]"
         },
         {
-            "title": "Challenges of On-Device AI",
+            "title": "What is Density?",
             "content": [
                 {
-                    "bulletPoint": "- Power constraints: Limited computing power on devices can affect model performance.",
+                    "bulletPoint": "Density is mass per unit volume: D = M ÷ V",
                     "shortSubPoints": [
-                        "Power constraints limit the complexity of models that can be run locally.",
-                        "Reduced processing speed impacts real-time applications."
+                        "Units: g/cm³ or kg/m³",
+                        "Intrinsic property — does not depend on sample size",
+                        "Used to identify substances"
                     ],
                     "details": [
-                        "Running a complex machine learning model requires more energy, which is not always available in low-power environments.",
-                        "Lower CPU and GPU speeds mean slower response times for users."
-                    ]
-                },
-                {
-                    "bulletPoint": "- Resource Management: Efficiently managing limited resources like memory and processing cores is critical.",
-                    "shortSubPoints": [
-                        "Memory management ensures data remains accessible without using up too much storage space.",
-                        "Processing core optimization maximizes utilization of available hardware."
-                    ],
-                    "details": [
-                        "Memory fragmentation can lead to inefficient use, causing models to run slower or crash. ",
-                        "Overloading a single processing core with multiple tasks can deplete system resources quickly."
-                    ]
-                },
-                {
-                    "bulletPoint": "- Security Risks: Ensuring data security in local storage and transmission.",
-                    "shortSubPoints": [
-                        "Data protection mechanisms like encryption are necessary to safeguard sensitive information.",
-                        "Secure communication protocols prevent unauthorized access during data transfer."
-                    ],
-                    "details": [
-                        "Local storage can be a target for attackers, who might exploit vulnerabilities to extract or manipulate data. ",
-                        "Transmission of data over local networks must be encrypted to prevent interception by third parties."
+                        "Gold has a density of ~19.3 g/cm³; water is 1.0 g/cm³. Objects denser than water sink; less dense objects float."
                     ]
                 }
             ],
-            "speech": "Let's discuss the challenges of on-device AI. Power constraints are a major hurdle; limited computing power can significantly affect model performance. Running complex machine learning models requires more energy, and in low-power environments, this is not always available. This leads to slower response times for users. Resource management is also critical here — efficiently managing things like memory and processing cores is essential. For instance, memory fragmentation can cause the model to run slower or crash altogether. Overloading a single processing core with multiple tasks can quickly deplete system resources. On top of that, ensuring data security in local storage and transmission is another big challenge we face. Local storage can be a target for attackers who might exploit vulnerabilities to extract or manipulate data. Transmission of data over local networks must be encrypted to prevent interception by third parties."
+            "speech": "Density ties mass and volume together through the formula D equals M divided by V. It tells us how tightly matter is packed and is an intrinsic property, meaning it stays the same no matter how large or small the sample is. [PAUSE=1]"
         },
         {
-            "title": "Techniques for On-Device AI",
+            "title": "The Density Triangle",
             "content": [
                 {
-                    "bulletPoint": "- Model Compression: Reducing model size to fit available device hardware constraints.",
+                    "bulletPoint": "A memory aid for rearranging D = M ÷ V",
                     "shortSubPoints": [
-                        "Reduce model complexity",
-                        "Eliminate unnecessary layers"
+                        "Mass   = Density × Volume",
+                        "Volume = Mass ÷ Density",
+                        "Density = Mass ÷ Volume"
                     ],
                     "details": [
-                        "Optimize neural networks by pruning weights, merging layers, and simplifying architectures.",
-                        "Implement techniques like Knowledge Distillation for further reduction."
-                    ]
-                },
-                {
-                    "bulletPoint": "- Quantization: Lowering precision of numbers used by a neural network, reducing computational load.",
-                    "shortSubPoints": [
-                        "Reduce number of bits per weight",
-                        "Quantize activations"
-                    ],
-                    "details": [
-                        "Use quantization schemes such as QAT (Quantized Asymmetric Training) and QNN (Quantized Neural Networks).",
-                        "Consider the impact on model accuracy for specific tasks."
-                    ]
-                },
-                {
-                    "bulletPoint": "- Federated Learning: Combining training data from various devices while maintaining user privacy.",
-                    "shortSubPoints": [
-                        "Reduce data transmission",
-                        "Enhance security protocols"
-                    ],
-                    "details": [
-                        "Train models locally using mini-batches of data.",
-                        "Use secure aggregation methods to combine model weights across multiple users without revealing individual contributions."
+                        "Cover the quantity you want to find; the triangle shows whether to multiply or divide the remaining two."
                     ]
                 }
             ],
-            "speech": "Let's discuss Techniques for On-Device AI. Model compression is key, where we reduce the size of models to fit available device hardware constraints. This can be achieved by pruning weights, merging layers, and simplifying architectures. We also use techniques like Knowledge Distillation to further compress these models. Quantization comes next, which involves lowering the precision of numbers used by neural networks to reduce computational load. To make it even more efficient, we use schemes like QAT (Quantized Asymmetric Training) and QNN (Quantized Neural Networks), considering their impact on model accuracy for specific tasks. Finally, Federated Learning allows us to combine training data from various devices while maintaining user privacy by training models locally with mini-batches of data using secure aggregation methods. Let's pause here for a moment."
+            "speech": "The density triangle is a handy tool. Place Mass at the top, Density and Volume at the bottom. Cover the unknown variable and the triangle shows whether to multiply or divide. [PAUSE=1]"
         },
         {
-            "title": "Current Applications",
+            "title": "Worked Examples",
             "content": [
                 {
-                    "bulletPoint": "- Smart Home Automation: Devices can learn and adapt to user routines without connecting to the cloud.",
+                    "bulletPoint": "Example 1 — Find density",
                     "shortSubPoints": [
-                        "Devices recognize patterns",
-                        "Continuous learning from local data"
+                        "Mass = 200 g, Volume = 25 cm³",
+                        "D = 200 ÷ 25 = 8 g/cm³  (copper)"
                     ],
                     "details": [
-                        "Smart lights adjust brightness based on ambient light",
-                        "Thermostats optimize heating/cooling in response to occupancy"
+                        "Copper has a standard density of 8.96 g/cm³; this is close, showing the formula works."
                     ]
                 },
                 {
-                    "bulletPoint": "- Healthcare: Localized medical monitoring, diagnosis, and treatment recommendations.",
+                    "bulletPoint": "Example 2 — Find volume",
                     "shortSubPoints": [
-                        "Local sensor networks",
-                        "Self-diagnostic capabilities"
+                        "Mass = 50 g, Density = 2.5 g/cm³",
+                        "V = 50 ÷ 2.5 = 20 cm³"
                     ],
                     "details": [
-                        "Wearable devices track health metrics locally",
-                        "Health apps analyze data for early warning signs without cloud"
+                        "This is consistent with a small piece of glass (density ≈ 2.5 g/cm³)."
+                    ]
+                },
+                {
+                    "bulletPoint": "Example 3 — Find mass",
+                    "shortSubPoints": [
+                        "Density = 1.0 g/cm³, Volume = 500 cm³",
+                        "M = 1.0 × 500 = 500 g  (water)"
+                    ],
+                    "details": [
+                        "Pure water at 4 °C has a density of exactly 1.0 g/cm³, making it the reference standard."
                     ]
                 }
             ],
-            "speech": "Let's discuss Current Applications. Smart Home Automation is really interesting where devices can learn your routines without needing to connect to the cloud. For example, smart lights adjust brightness based on ambient light, and thermostats optimize heating or cooling when you're home. In healthcare, we have localized monitoring that allows for diagnoses and treatment recommendations right from wearable devices. Health apps also track health metrics locally and analyze data to spot early warning signs without needing to connect to a cloud server. [PAUSE=1]"
+            "speech": "Let's solidify the concepts with three worked examples: finding density given mass and volume, finding volume given mass and density, and finding mass given density and volume. Each follows directly from D equals M divided by V. [PAUSE=1]"
         }
-    ],
-    "introduction": "Hello everyone. Today, I will be presenting about On Device AI. We'll start by introducing what On-Device AI is and its basics. Then we’ll explore the advantages it offers and some of the challenges involved. After that, we'll delve into different techniques used for implementing On-Device AI. Finally, I’ll share examples of current applications where On-Device AI is being used. [PAUSE=1]"
+    ]
 }

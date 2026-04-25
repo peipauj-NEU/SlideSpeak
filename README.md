@@ -160,11 +160,26 @@ SlideSpeak can be run in two modes:
 
 ### Using the Command Line Interface (CLI)
 
-1.  Run `main.py` to generate PPTX with predefined topics:
+The project now includes a headless CLI entry point in `main.py` with three subcommands:
+
+1.  Generate outline, transcript, and PPTX from a topic:
     ```bash
-    python main.py
+    python main.py generate "On Device AI Qualcomm Technology"
     ```
-2.  The generated PPTX file (`PPT.pptx`) is saved in the project directory.
+2.  Build a PPTX from existing generated files without calling the LLM again:
+    ```bash
+    python main.py build --outline output/enriched_outline.json --speech output/presentation_speech.md --pptx output/headless-test.pptx
+    ```
+3.  Generate per-slide audio from an existing transcript:
+    ```bash
+    python main.py tts --engine pyttsx3 --transcript output/presentation_speech.md --output-dir output/audio
+    ```
+
+Notes:
+- `generate` still requires Ollama or the configured NPU endpoint to be available.
+- `build` is the best option for headless containers because it only needs the saved outline and transcript files.
+- `tts --engine pyttsx3` requires `eSpeak` or `eSpeak-ng` on Linux.
+- `tts --engine kokoro` requires the Kokoro model files described in the prerequisites section.
 
 ## Notes
 

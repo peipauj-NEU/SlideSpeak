@@ -1,0 +1,7 @@
+requests
+python-pptx
+pyttsx3
+soundfile
+numpy
+kokoro
+pywin32; platform_system == "Windows"
